@@ -1,9 +1,13 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 import org.apache.commons.configuration.Configuration;
+
+import com.google.common.collect.Lists;
 
 import de.hybris.platform.core.Registry;
 import de.hybris.platform.servicelayer.config.ConfigurationService;
@@ -17,6 +21,12 @@ public class TestClass {
 		Configuration configuration = configurationService.getConfiguration();
 		
 		Iterator<String> keys = configuration.getKeys();
+		
+		ArrayList<String> newArrayList = Lists.newArrayList(keys);
+		
+		Collections.sort(newArrayList);
+		
+		keys = newArrayList.iterator();
 		
 		File file = new File("C:\\apps\\configs.properties");
 		
