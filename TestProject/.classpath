@@ -9,13 +9,17 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/acceleratorwebservicesaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/adaptivesearch"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/adaptivesearchbackoffice"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/adaptivesearchsamplesaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/adaptivesearchsolr"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/addonsupport"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/admincockpit"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/apparelstore"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/assistedserviceatddtests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/assistedservicefacades"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/assistedserviceservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/assistedservicestorefront"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/atddengine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/atddimpex"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/b2bacceleratoraddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/b2bacceleratorfacades"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/b2bacceleratorservices"/>
@@ -25,8 +29,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/b2bcommerce"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/b2bcommercebackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/b2bcommercefacades"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/b2bordermanagementfacades"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/b2bordermanagementwebservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/backoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/backofficesolrsearch"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/basecommerce"/>
@@ -41,14 +43,12 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/cockpit"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/commercefacades"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/commerceorgaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/commerceorgsamplesaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/commerceservices"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/commerceservicesatddtests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/commerceservicesbackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/commercewebservicescommons"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/config"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/consignmenttrackingaddon"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/consignmenttrackingbackoffice"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/consignmenttrackingfacades"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/consignmenttrackingservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/couponbackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/couponfacades"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/couponservices"/>
@@ -60,22 +60,35 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/droolsruleengineservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/electronicsstore"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/embeddedserver"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/instore"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/liveeditaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/mcc"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/npmancillary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ordercalculation"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ordermanagementaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ordermanagementfacade"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ordermanagementwebservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/orderselfserviceaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/payment"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/pcmbackoffice"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/pcmbackofficesamplesaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/permissionswebservices"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationcms"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationcmsbackoffice"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationcmsweb"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationfacades"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationpromotions"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationpromotionsbackoffice"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationpromotionsweb"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationsampledataaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationservices"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationservicesbackoffice"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationsmartedit"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/personalizationwebservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/platform"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/platformbackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/powertoolsstore"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/previewpersonalizationweb"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/previewwebservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/productcockpit"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/promotionengineatddtests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/promotionenginebackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/promotionenginesamplesaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/promotionengineservices"/>
@@ -85,6 +98,7 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/rulebuilderbackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ruledefinitions"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ruleengine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ruleengineatddtests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ruleenginebackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ruleengineservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/smartedit"/>
@@ -94,25 +108,26 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/solrfacetsearchbackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/solrserver"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/springintegrationlibs"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/textfieldconfiguratortemplateaddon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/textfieldconfiguratortemplateatddtests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/textfieldconfiguratortemplatebackoffice"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/textfieldconfiguratortemplatefacades"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/textfieldconfiguratortemplateservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ticketsystem"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ticketsystembackoffice"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/tomcatembeddedserver"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/virtualjdbc"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/voucher"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/voucherbackoffice"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/warehousing"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/warehousingbackoffice"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/warehousingfacade"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/warehousingwebservices"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/webservicescommons"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/yacceleratorcockpits"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/yacceleratorcore"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/yacceleratorfacades"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/yacceleratorfulfilmentprocess"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/yacceleratorinitialdata"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/yacceleratorordermanagement"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/yacceleratorstorefront"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/yaddon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/yb2bacceleratorstorefront"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ycommercewebservices"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ycommercewebservicestest"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

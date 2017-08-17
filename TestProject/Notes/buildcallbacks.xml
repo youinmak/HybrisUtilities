@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2014 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+
+-->
+<!--
+ All hybris buildcallbacks.xml macrodefinitions:
+ 
+ Build/Documentation
+ 
+	 before/after ant macro "clean"
+		 <macrodef name="lcwcore_before_clean"/>
+		 <macrodef name="lcwcore_after_clean"/>
+
+	 before/after ant macro "build"
+		 <macrodef name="lcwcore_before_build"/>
+		 <macrodef name="lcwcore_after_build"/>
+
+	 before/after ant macro "compile_core" - the core module of the extension
+		 <macrodef name="lcwcore_before_compile_core">
+		 <macrodef name="lcwcore_after_compile_core">
+
+	 before/after ant macro "compile_web" - the web module of the extension
+		 <macrodef name="lcwcore_before_compile_web" />
+		 <macrodef name="lcwcore_after_compile_web" />
+
+	 before/after ant macro "compile_hmc" - the hmc module of the extension
+		 <macrodef name="lcwcore_before_compile_hmc" />
+		 <macrodef name="lcwcore_after_compile_hmc" />
+ 
+ Preparing extension
+ 
+	 will be called in the beginning of the ant call and only once (also when using multiple 
+	 ant targets e.g. ant build yunittest)
+		 <macrodef name="lcwcore_only_once_prepare"/>
+ 
+ Creating ear module/production
+ 
+	 before/after ant macro "ear"
+		 <macrodef name="lcwcore_before_ear"/>
+		 <macrodef name="lcwcore_after_ear"/>
+
+	 before/after ant macro "production" - for hybris server only
+		 <macrodef name="lcwcore_before_production" />
+		 <macrodef name="lcwcore_after_production" />
+ 
+ JUnit Test
+ 
+	 before/after ant macro "yunitinit" 
+		 <macrodef name="lcwcore_before_yunitinit" />
+		 <macrodef name="lcwcore_after_yunitinit" />
+
+	 before/after ant macro "yunit"
+		 <macrodef name="lcwcore_before_yunit" />
+		 <macrodef name="lcwcore_after_yunit" /> 
+
+ Distribution package
+ 
+ 	 before/after ant macro "dist" - internal target; only for use when platform is available in source code
+		 <macrodef name="lcwcore_after_dist"/>
+		 <macrodef name="lcwcore_before_dist"/>
+
+	 before/after ant macro "dist_copy" - internal target; only for use when platform is available in source code
+		 <macrodef name="lcwcore_before_dist_copy"/>
+		 <macrodef name="lcwcore_after_dist_copy"/>
+
+-->
+<project name="lcwcore_buildcallbacks" xmlns:sonar="antlib:org.sonar.ant">
+
+	<macrodef name="lcwcore_after_build">
+		<sequential>
+			<impexGenerate extname="lcwcore" />
+		</sequential>
+	</macrodef>
+
+	<macrodef name="lcwcore_after_clean">
+		<sequential>
+			<delete failonerror="false" file="${ext.lcwcore.path}/resources-lang/touch_impexgen" />
+		</sequential>
+	</macrodef>
+
+	<property name="sonar.jdbc.url" value="${sonar.jdbc.url}" />
+	<property name="sonar.jdbc.username" value="${sonar.jdbc.username}" />
+	<property name="sonar.jdbc.password" value="${sonar.jdbc.password}" />
+
+	<property name="sonar.projectKey" value="org.codehaus.sonar:lcw" />
+	<property name="sonar.projectName" value="LCW Sonar" />
+	<property name="sonar.sources" value="src" />
+	<property name="sonar.binaries" value="classes" />
+	<property name="sonar.forceAnalysis" value="true" />
+
+	<property name="sonar.modules" value="lcwcore,lcwfacades,lcwcockpits,lcwbackoffice,lcwinitialdata,lcwordermanagement,lcwruleengineservices,lcwstorefront" />
+
+	<property name="lcwcore.sonar.projectBaseDir" value="${ext.lcwcore.path}" />
+	<property name="lcwcore.sonar.projectName" value="lcwcore" />
+	<property name="lcwcore.sonar.sources" value="src" />
+	<property name="lcwcore.sonar.binaries" value="classes" />
+
+	<property name="lcwfacades.sonar.projectBaseDir" value="${ext.lcwfacades.path}" />
+	<property name="lcwfacades.sonar.projectName" value="lcwfacades" />
+	<property name="lcwfacades.sonar.sources" value="src" />
+	<property name="lcwfacades.sonar.binaries" value="classes" />
+
+	<property name="lcwstorefront.sonar.projectBaseDir" value="${ext.lcwstorefront.path}" />
+	<property name="lcwstorefront.sonar.projectName" value="lcwstorefront" />
+	<property name="lcwstorefront.sonar.sources" value="src" />
+	<property name="lcwstorefront.sonar.binaries" value="classes" />
+
+	<property name="lcwcockpits.sonar.projectBaseDir" value="${ext.lcwcockpits.path}" />
+	<property name="lcwcockpits.sonar.projectName" value="lcwcockpits" />
+	<property name="lcwcockpits.sonar.sources" value="src" />
+	<property name="lcwcockpits.sonar.binaries" value="classes" />
+
+	<property name="lcwordermanagement.sonar.projectBaseDir" value="${ext.lcwordermanagement.path}" />
+	<property name="lcwordermanagement.sonar.projectName" value="lcwordermanagement" />
+	<property name="lcwordermanagement.sonar.sources" value="src" />
+	<property name="lcwordermanagement.sonar.binaries" value="classes" />
+
+	<property name="lcwruleengineservices.sonar.projectBaseDir" value="${ext.lcwruleengineservices.path}" />
+	<property name="lcwruleengineservices.sonar.projectName" value="lcwruleengineservices" />
+	<property name="lcwruleengineservices.sonar.sources" value="src" />
+	<property name="lcwruleengineservices.sonar.binaries" value="classes" />
+
+	<property name="lcwfacades.sonar.projectBaseDir" value="${ext.lcwfacades.path}" />
+	<property name="lcwfacades.sonar.projectName" value="lcwfacades" />
+	<property name="lcwfacades.sonar.sources" value="src" />
+	<property name="lcwfacades.sonar.binaries" value="classes" />
+
+	<property name="lcwbackoffice.sonar.projectBaseDir" value="${ext.lcwbackoffice.path}" />
+	<property name="lcwbackoffice.sonar.projectName" value="lcwbackoffice" />
+	<property name="lcwbackoffice.sonar.sources" value="src" />
+	<property name="lcwbackoffice.sonar.binaries" value="classes" />
+
+	<property name="lcwinitialdata.sonar.projectBaseDir" value="${ext.lcwinitialdata.path}" />
+	<property name="lcwinitialdata.sonar.projectName" value="lcwinitialdata" />
+	<property name="lcwinitialdata.sonar.sources" value="src" />
+	<property name="lcwinitialdata.sonar.binaries" value="classes" />
+
+	<property name="lcwws.sonar.projectBaseDir" value="${ext.lcwws.path}" />
+	<property name="lcwws.sonar.projectName" value="lcwws" />
+	<property name="lcwws.sonar.sources" value="src" />
+	<property name="lcwws.sonar.binaries" value="classes" />
+
+	<target name="sonar">
+		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+			<classpath path="/platform/resources/ant/lib/sonar-ant-task-2.2.jar" />
+		</taskdef>
+		<sonar:sonar />
+	</target>
+
+</project>
