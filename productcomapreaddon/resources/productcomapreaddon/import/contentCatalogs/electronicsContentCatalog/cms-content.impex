@@ -1,0 +1,59 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+$contentCatalog=electronicsContentCatalog
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$jarResourceCms=jar:com.product.compare.constants.ProductcomapreaddonConstants&/productcomapreaddon/import/cockpit/cmscockpit
+
+########################## page template defined ###########################
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+;;ProductComparisonPageTemplate;Product Comparison Page Template;productComparisonPage;ContentPage;;
+
+######################### Define content SlotNames #############################
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='ProductComparisonPageTemplate'];validComponentTypes(code)
+;productInfoSection;;CMSParagraphComponent
+;WBCSocialMediaParagraphSection;;CMSParagraphComponent
+
+######################### Define content Slots #############################
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+;;SiteLogoSlot;Site Logo Slot;true
+;;ParagraphSlot;Paragraph Slot;true
+;;MiniCartSlot;Mini Cart Slot;true
+;;NavigationBarSlot;Navigation Bar Slot;true
+;;ProductComparisonParagraphSlot; Product Comparison Paragraph Slot;true
+;;FooterSlot;Footer Slot;true
+;;FooterParagraphSlot;Footer Paragraph Slot;true
+;;TopLinksSlot;Top Links Slot;true
+;;FooterEmailSignUpSlot;Footer Email SignUp Slot;true
+;;WBCExtendedFooterSlot;WBC Extended Footer Slot;true
+;;WBCSocialMediaSectionSlot;WBC Social Media Section Slot;true
+;;WBCSocialMediaParagraphSectionSlot;WBC Social Media Paragraph Section ;true
+
+########################### Define Content slots for template ######################
+INSERT_UPDATE ContentSlotForTemplate;$contentCV;uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='ProductComparisonPageTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-ProductComparisonPage;SiteLogo;;SiteLogoSlot;true
+;;Paragraph-ProductComparisonPage;TopLeftParagraph;;ParagraphSlot;true
+;;MiniCart-ProductComparisonPage;MiniCart;;MiniCartSlot;true
+;;NavigationBar-ProductComparisonPage;NavigationBar;;NavigationBarSlot;true
+;;ProductComparison-ProductComparisonPage;productInfoSection;;ProductComparisonParagraphSlot;true
+;;Footer-ProductComparisonPage;Footer;;FooterSlot;true
+;;FooterParagraph-ProductComparisonPage;FooterParagraph;;FooterParagraphSlot;true
+;;TopLinks-ProductComparisonPage;TopLinks;;TopLinksSlot;true
+;;FooterEmailSignUp-ProductComparisonPage;FooterEmail;;FooterEmailSignUpSlot;true
+;;WBCExtendedFooter-ProductComparisonPage;ExtendedFooter;;WBCExtendedFooterSlot;true
+;;WBCSocialMedia-ProductComparisonPage;WBCSocialMediaSection;;WBCSocialMediaSectionSlot;true
+;;WBCSocialMediaParagraphSection-ProductComparisonPage;WBCSocialMediaParagraphSection;;WBCSocialMediaParagraphSectionSlot;true
+
+
+
+####################### Define Content Page ###################################
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];
+;;productComparisonPage;Product Comparison;ProductComparisonPageTemplate;productComparisonPage;;;
+####################### END #######################################

@@ -1,0 +1,9 @@
+#Ant properties
+#Fri Sep 29 11:48:35 CEST 2017
+builddate=20170929 1146
+description=productcomapreaddon
+name=productcomapreaddon
+releasedate=20170803 1323
+vendor=hybris
+version=6.5.0.1
+version.api=6.5.0
